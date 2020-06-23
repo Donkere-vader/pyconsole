@@ -27,10 +27,10 @@ class Console:
 
     def start(self):
         try:
-            self.log_file = open(f"{self.log_dir}/{datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')}", "a")
+            self.log_file = open(f"{self.log_dir}/{datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')}.log", "a")
         except FileNotFoundError:
             os.mkdir(self.log_dir)
-            self.log_file = open(f"{self.log_dir}/{datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')}", "a")
+            self.log_file = open(f"{self.log_dir}/{datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')}.log", "a")
 
         self.output()
 
